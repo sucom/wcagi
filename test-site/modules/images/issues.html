@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Images Issues - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .demo-img { width: 100px; height: 100px; background: #eee; display: inline-block; border: 1px solid #ccc; text-align:center; line-height:100px; color:#999;}
+    svg { width: 50px; height: 50px; }
+  </style>
+</head>
+<body>
+  <main class="test-container">
+    <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="test-header">
+      <h1>Images Module - Intentional Issues</h1>
+      <p>This page contains images missing alt text and SVGs lacking accessibility.</p>
+    </div>
+
+    <section>
+      <h2>Missing Alt Text</h2>
+      <p>This image completely lacks the alt attribute.</p>
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="demo-img">
+    </section>
+
+    <section>
+      <h2>Decorative Image without empty alt</h2>
+      <p>This image is decorative but has no alt="", so screen readers might read the filename.</p>
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="demo-img" role="presentation">
+    </section>
+
+    <section>
+      <h2>Inaccessible SVG</h2>
+      <p>This SVG acts as an icon but has no title, desc, or aria-hidden.</p>
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+      </svg>
+    </section>
+  </main>
+</body>
+</html>

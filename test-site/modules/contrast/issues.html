@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contrast Issues - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .bad-contrast-1 { background-color: #ffffff; color: #e0e0e0; padding: 1rem; }
+    .bad-contrast-2 { background-color: #222222; color: #444444; padding: 1rem; }
+    .bad-contrast-3 { background-color: #ff0000; color: #ff6666; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <main class="test-container">
+    <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="test-header">
+      <h1>Contrast Module - Intentional Issues</h1>
+      <p>This page contains text elements that fail WCAG contrast ratios.</p>
+    </div>
+
+    <section>
+      <h2>Low Contrast: Light on White</h2>
+      <div class="bad-contrast-1">
+        This text is very light gray on a white background. It fails contrast requirements.
+      </div>
+    </section>
+
+    <section>
+      <h2>Low Contrast: Dark on Dark</h2>
+      <div class="bad-contrast-2">
+        This text is dark gray on a very dark background. It fails contrast requirements.
+      </div>
+    </section>
+
+    <section>
+      <h2>Low Contrast: Colors</h2>
+      <div class="bad-contrast-3">
+        This text is light red on a bright red background.
+      </div>
+    </section>
+  </main>
+</body>
+</html>

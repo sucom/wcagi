@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WCAGI Test Site Dashboard</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="" style="width: 64px; height: 64px; border-radius: 16px; margin-bottom: 1rem;">
+    <h1>WCAGI Validation Test Site</h1>
+    <p>This site contains intentional accessibility violations (and their fixes) to validate the WCAGI extension.</p>
+  </header>
+
+  <main>
+    <section class="module-grid">
+      <div class="module-card">
+        <h2>Structure</h2>
+        <p>Headings, Landmarks, and Lists</p>
+        <div class="links">
+          <a href="modules/structure/issues.html" class="btn btn-issue">Issues Page</a>
+          <a href="modules/structure/fixed.html" class="btn btn-fixed">Fixed Page</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <h2>Markup</h2>
+        <p>IDs, Lang attributes, ARIA roles, Obsolete tags</p>
+        <div class="links">
+          <a href="modules/markup/issues.html" class="btn btn-issue">Issues Page</a>
+          <a href="modules/markup/fixed.html" class="btn btn-fixed">Fixed Page</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <h2>Tables</h2>
+        <p>Table Headers, Captions, Scope</p>
+        <div class="links">
+          <a href="modules/table/issues.html" class="btn btn-issue">Issues Page</a>
+          <a href="modules/table/fixed.html" class="btn btn-fixed">Fixed Page</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <h2>Forms</h2>
+        <p>Labels, Fieldsets, Legends, Required attributes</p>
+        <div class="links">
+          <a href="modules/forms/issues.html" class="btn btn-issue">Issues Page</a>
+          <a href="modules/forms/fixed.html" class="btn btn-fixed">Fixed Page</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <h2>Images</h2>
+        <p>Alt text, Decorative images, SVGs</p>
+        <div class="links">
+          <a href="modules/images/issues.html" class="btn btn-issue">Issues Page</a>
+          <a href="modules/images/fixed.html" class="btn btn-fixed">Fixed Page</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <h2>Links</h2>
+        <p>Link text meaning, Empty links, Buttons</p>
+        <div class="links">
+          <a href="modules/links/issues.html" class="btn btn-issue">Issues Page</a>
+          <a href="modules/links/fixed.html" class="btn btn-fixed">Fixed Page</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <h2>Contrast</h2>
+        <p>Text/Background color contrast ratio</p>
+        <div class="links">
+          <a href="modules/contrast/issues.html" class="btn btn-issue">Issues Page</a>
+          <a href="modules/contrast/fixed.html" class="btn btn-fixed">Fixed Page</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <h2>Linearize (Visual Assist)</h2>
+        <p>Strips layout (grids, floats) to expose logical DOM order</p>
+        <div class="links">
+          <a href="modules/linearize/demo.html" class="btn btn-issue" style="background-color:#f0f8ff; color:#0366d6; border-color:rgba(3,102,214,0.3);">View Demo Page</a>
+        </div>
+      </div>
+
+      <div class="module-card">
+        <h2>Manipulate (Visual Assist)</h2>
+        <p>Text Spacing, Enhanced Focus, Reflow zoom</p>
+        <div class="links">
+          <a href="modules/manipulate/demo.html" class="btn btn-issue" style="background-color:#f0f8ff; color:#0366d6; border-color:rgba(3,102,214,0.3);">View Demo Page</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/axe.min.js"></script>
+</body>
+</html>

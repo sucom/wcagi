@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Linearize Demo - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    /* Intentionally confusing layout to break visual reading order vs DOM order */
+    .complex-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 2rem;
+    }
+    .box {
+      padding: 20px;
+      background: #eee;
+      border: 1px solid #ccc;
+    }
+    .dom-1 { grid-column: 3; background-color: #ffdce0;} /* DOM item 1, placed right */
+    .dom-2 { grid-column: 2; background-color: #d1d5da;} /* DOM item 2, placed middle */
+    .dom-3 { grid-column: 1; background-color: #e1e4e8;} /* DOM item 3, placed left */
+
+    .float-layout {
+      width: 100%;
+      overflow: hidden;
+    }
+    .float-right {
+      float: right;
+      width: 45%;
+      padding: 10px;
+      background: #c8e1ff;
+    }
+    .float-left {
+      float: left;
+      width: 45%;
+      padding: 10px;
+      background: #fffbdd;
+    }
+  </style>
+</head>
+<body>
+  <main class="test-container">
+    <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="test-header">
+      <h1>Linearize Demo</h1>
+      <p>This page uses CSS Grid and Floats to create a visual layout that contradicts the logical DOM reading order. Use the "Linearize" tool to strip the layout and reveal the true reading order.</p>
+    </div>
+
+    <section>
+      <h2>Grid Layout (Visual order: 3, 2, 1)</h2>
+      <div class="complex-layout">
+        <!-- DOM Item 1 is placed on the far right by CSS -->
+        <div class="box dom-1"><strong>DOM Item 1</strong><br>Visually placed 3rd.</div>
+
+        <!-- DOM Item 2 is placed in the middle by CSS -->
+        <div class="box dom-2"><strong>DOM Item 2</strong><br>Visually placed 2nd.</div>
+
+        <!-- DOM Item 3 is placed on the far left by CSS -->
+        <div class="box dom-3"><strong>DOM Item 3</strong><br>Visually placed 1st.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Float Layout</h2>
+      <div class="float-layout">
+        <div class="float-right"><strong>DOM Item A</strong><br>Floated to the right.</div>
+        <div class="float-left"><strong>DOM Item B</strong><br>Floated to the left.</div>
+      </div>
+      <p style="clear:both;">DOM Item C (Paragraph following floats).</p>
+    </section>
+  </main>
+</body>
+</html>

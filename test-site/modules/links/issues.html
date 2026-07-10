@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Links Issues - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+  <main class="test-container">
+    <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="test-header">
+      <h1>Links Module - Intentional Issues</h1>
+      <p>This page contains empty links, ambiguous link text, and empty buttons.</p>
+    </div>
+
+    <section>
+      <h2>Empty Link</h2>
+      <p>Link with no discernible text.</p>
+      <a href="https://example.com"></a>
+    </section>
+
+    <section>
+      <h2>Ambiguous Link Text</h2>
+      <p>Links that do not make sense out of context.</p>
+      <a href="https://example.com">Click here</a>
+      <a href="https://example.com">Read more</a>
+    </section>
+
+    <section>
+      <h2>Empty Button</h2>
+      <p>Button with an icon but no text or aria-label.</p>
+      <button>
+        <svg viewBox="0 0 10 10" width="10" height="10">
+          <rect width="10" height="10" fill="red"/>
+        </svg>
+      </button>
+    </section>
+
+    <section>
+      <h2>Invalid Href</h2>
+      <p>Link missing href or with javascript:void(0).</p>
+      <a>Missing Href</a>
+      <a href="javascript:void(0)">Javascript void</a>
+    </section>
+  </main>
+</body>
+</html>

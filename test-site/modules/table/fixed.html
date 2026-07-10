@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table Fixed - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f4f4f4; }
+    caption { padding: 8px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <main class="test-container">
+    <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="test-header">
+      <h1>Table Module - Fixed</h1>
+      <p>Properly structured data tables with headers, scope, and captions.</p>
+    </div>
+
+    <section>
+      <h2>Layout Table Fixed</h2>
+      <p>Layout table explicitly marked as presentation.</p>
+      <table role="presentation">
+        <tr>
+          <td>Left Column Content</td>
+          <td>Right Column Content</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Semantic Data Table</h2>
+      <p>Properly marked up data table.</p>
+      <table>
+        <caption>Employee Details</caption>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Alice</th>
+            <td>30</td>
+            <td>New York</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

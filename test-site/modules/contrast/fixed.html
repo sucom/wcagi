@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contrast Fixed - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .good-contrast-1 { background-color: #ffffff; color: #333333; padding: 1rem; }
+    .good-contrast-2 { background-color: #222222; color: #ffffff; padding: 1rem; }
+    .good-contrast-3 { background-color: #000000; color: #ffff00; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <main class="test-container">
+    <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="test-header">
+      <h1>Contrast Module - Fixed</h1>
+      <p>This page contains text elements that pass WCAG contrast ratios (AA and AAA).</p>
+    </div>
+
+    <section>
+      <h2>High Contrast: Dark on Light</h2>
+      <div class="good-contrast-1">
+        This text is dark gray on a white background. It passes contrast requirements easily.
+      </div>
+    </section>
+
+    <section>
+      <h2>High Contrast: Light on Dark</h2>
+      <div class="good-contrast-2">
+        This text is white on a very dark gray background.
+      </div>
+    </section>
+
+    <section>
+      <h2>High Contrast: Colors</h2>
+      <div class="good-contrast-3">
+        This text is yellow on a black background (very high contrast).
+      </div>
+    </section>
+  </main>
+</body>
+</html>

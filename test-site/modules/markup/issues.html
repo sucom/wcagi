@@ -1,0 +1,37 @@
+<html>
+<!-- Missing lang attribute on HTML tag -->
+<head>
+  <title>Markup Issues - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+  <main class="test-container">
+    <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="test-header">
+      <h1>Markup Module - Intentional Issues</h1>
+      <p>This page contains invalid markup, duplicate IDs, and invalid ARIA.</p>
+    </div>
+
+    <section>
+      <h2>Duplicate IDs</h2>
+      <p id="duplicate-me">This is paragraph 1 with ID "duplicate-me".</p>
+      <p id="duplicate-me">This is paragraph 2 with the same ID "duplicate-me".</p>
+    </section>
+
+    <section>
+      <h2>Obsolete Elements</h2>
+      <center>This center tag is obsolete.</center>
+      <font color="red">This font tag is obsolete.</font>
+      <marquee>Marquee is deprecated!</marquee>
+    </section>
+
+    <section>
+      <h2>Invalid ARIA Roles and Attributes</h2>
+      <div role="not-a-real-role">Invalid Role</div>
+      <button aria-invalid-attr="true">Invalid ARIA Attribute</button>
+      <div aria-hidden="invalid-value">Invalid ARIA Value</div>
+    </section>
+  </main>
+</body>
+</html>

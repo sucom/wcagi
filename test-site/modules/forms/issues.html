@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms Issues - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+  <main class="test-container">
+    <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="test-header">
+      <h1>Forms Module - Intentional Issues</h1>
+      <p>This page contains form inputs without labels, missing fieldsets, and poor required indicators.</p>
+    </div>
+
+    <section>
+      <h2>Missing Label</h2>
+      <p>Input without any associated label.</p>
+      <input type="text" placeholder="First Name">
+    </section>
+
+    <section>
+      <h2>Label Title Only</h2>
+      <p>Input that relies solely on the title attribute for its accessible name.</p>
+      <input type="text" title="Search for products">
+    </section>
+
+    <section>
+      <h2>Label Content Name Mismatch</h2>
+      <p>Button text does not match the aria-label.</p>
+      <button aria-label="Submit Form">Send</button>
+    </section>
+
+    <section>
+      <h2>Select Missing Name</h2>
+      <p>Select dropdown without a label.</p>
+      <select>
+        <option>Option 1</option>
+      </select>
+    </section>
+
+    <section>
+      <h2>Input Button Missing Name</h2>
+      <p>Input of type button without a value or label.</p>
+      <input type="button">
+    </section>
+
+    <section>
+      <h2>Multiple Labels</h2>
+      <p>Input with multiple labels pointing to it.</p>
+      <label for="multi">First Label</label>
+      <label for="multi">Second Label</label>
+      <input type="text" id="multi">
+    </section>
+
+    <section>
+      <h2>Radiogroup Missing Fieldset</h2>
+      <p>Radio buttons grouped logically but not grouped in a fieldset semantically.</p>
+      <input type="radio" name="color" value="red" id="c_red" title="red"> Red<br>
+      <input type="radio" name="color" value="blue" id="c_blue" title="blue"> Blue
+    </section>
+  </main>
+</body>
+</html>

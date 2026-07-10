@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Structure Issues - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+  <!-- Missing landmarks (no header, nav, main, footer) -->
+  <div class="test-container">
+    <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="test-header">
+      <!-- Missing H1 -->
+      <h2>Structure Module - Intentional Issues</h2>
+      <p>This page contains heading, landmark, and list violations.</p>
+    </div>
+
+    <div>
+      <h3>Missing Landmarks</h3>
+      <p>This content is not wrapped in any semantic landmarks.</p>
+    </div>
+
+    <div>
+      <h2>Improper Heading Order</h2>
+      <p>Heading levels are skipped here.</p>
+      <h4>This is an H4, but the previous was an H2 (Skipped H3)</h4>
+      <h6>This is an H6, skipping H5</h6>
+    </div>
+
+    <div>
+      <h3>List Structure Violations</h3>
+      <p>List with elements that are not LIs.</p>
+      <ul>
+        <li>Valid item 1</li>
+        <div>Invalid child inside UL</div>
+        <li>Valid item 2</li>
+      </ul>
+
+      <p>Empty list:</p>
+      <ul></ul>
+    </div>
+  </div>
+</body>
+</html>

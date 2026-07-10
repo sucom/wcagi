@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Images Fixed - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .demo-img { width: 100px; height: 100px; background: #eee; display: inline-block; border: 1px solid #ccc; text-align:center; line-height:100px; color:#999;}
+    svg { width: 50px; height: 50px; }
+  </style>
+</head>
+<body>
+  <main class="test-container">
+    <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="test-header">
+      <h1>Images Module - Fixed</h1>
+      <p>Properly annotated images and SVGs.</p>
+    </div>
+
+    <section>
+      <h2>Descriptive Alt Text</h2>
+      <p>Meaningful image with proper alt text.</p>
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="A tiny transparent pixel" class="demo-img">
+    </section>
+
+    <section>
+      <h2>Decorative Image</h2>
+      <p>Decorative image correctly hidden from screen readers using empty alt.</p>
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" class="demo-img">
+    </section>
+
+    <section>
+      <h2>Accessible SVG</h2>
+      <p>SVG hidden from screen readers because it is decorative.</p>
+      <svg viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="green" />
+      </svg>
+
+      <p>Interactive/Meaningful SVG with a title.</p>
+      <svg viewBox="0 0 100 100" role="img" aria-labelledby="svg-title">
+        <title id="svg-title">Green Circle</title>
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="green" />
+      </svg>
+    </section>
+  </main>
+</body>
+</html>

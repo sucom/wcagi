@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manipulate Demo - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    /* Intentional tight spacing and focus ring removal */
+    .tight-text {
+      line-height: 1;
+      letter-spacing: -0.5px;
+      word-spacing: -1px;
+      margin-bottom: 2rem;
+    }
+
+    .hidden-focus *:focus {
+      outline: none !important; /* Extremely bad practice */
+    }
+
+    .custom-focus *:focus {
+      outline: 1px dotted #ccc; /* Barely visible focus */
+    }
+  </style>
+</head>
+<body>
+  <main class="test-container">
+    <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="test-header">
+      <h1>Manipulate Demo</h1>
+      <p>Use the "Text Spacing", "Enhanced Focus", and "Reflow" tools on this page to override these intentionally bad author styles.</p>
+    </div>
+
+    <section>
+      <h2>Text Spacing Override</h2>
+      <div class="tight-text">
+        <p>This paragraph has intentionally very tight line-height (1.0), negative letter spacing, and negative word spacing. It is very hard to read for users with cognitive or visual impairments. The Text Spacing tool should override this to WCAG requirements (Line height: 1.5, Letter spacing: 0.12em, Word spacing: 0.16em, Paragraph spacing: 2em).</p>
+        <p>This is a second paragraph in the tight-text block to test paragraph spacing overrides.</p>
+      </div>
+    </section>
+
+    <section class="hidden-focus">
+      <h2>Enhanced Focus: Hidden Outlines</h2>
+      <p>Focus rings are completely removed here using <code>outline: none !important;</code>. Tab through the inputs to see.</p>
+      <input type="text" placeholder="Tab to me (hidden)">
+      <button>Tab to me (hidden)</button>
+      <a href="#">Link (hidden focus)</a>
+    </section>
+
+    <br>
+
+    <section class="custom-focus">
+      <h2>Enhanced Focus: Low Visibility</h2>
+      <p>Focus rings are customized but barely visible (1px dotted gray). The Enhanced Focus tool should enforce a highly visible ring.</p>
+      <input type="text" placeholder="Tab to me (low vis)">
+      <button>Tab to me (low vis)</button>
+      <a href="#">Link (low vis)</a>
+    </section>
+  </main>
+</body>
+</html>

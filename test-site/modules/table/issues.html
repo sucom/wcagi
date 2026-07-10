@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table Issues - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+  <main class="test-container">
+    <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="test-header">
+      <h1>Table Module - Intentional Issues</h1>
+      <p>This page contains tables used for layout and data tables missing semantic headers.</p>
+    </div>
+
+    <section>
+      <h2>Invalid Scope Attribute</h2>
+      <p>TH elements with an invalid scope value.</p>
+      <table>
+        <tr>
+          <th scope="incorrect-value">Product</th>
+          <th scope="foo">Price</th>
+        </tr>
+        <tr>
+          <td>Apple</td>
+          <td>$1</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Broken Headers Attribute</h2>
+      <p>Data cell uses headers attribute pointing to non-existent ID.</p>
+      <table>
+        <tr>
+          <th id="valid-th">Name</th>
+        </tr>
+        <tr>
+          <td headers="does-not-exist">John</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Duplicate Name (Caption & Summary)</h2>
+      <p>Table uses identical text for summary and caption.</p>
+      <table summary="Duplicate description text">
+        <caption>Duplicate description text</caption>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Status</th>
+        </tr>
+        <tr>
+          <td>123</td>
+          <td>Active</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Orphaned Header</h2>
+      <p>A table header that has no data cells associated with it.</p>
+      <table>
+        <tr>
+          <th>Valid Header</th>
+          <th headers="nobody">Orphaned Header</th>
+        </tr>
+        <tr>
+          <td>Valid Data</td>
+          <!-- Missing data cell here -->
+        </tr>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

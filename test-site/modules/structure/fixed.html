@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Structure Fixed - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="test-container" style="box-shadow: none; padding-bottom: 0;">
+      <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="test-container" style="margin-top: 0;">
+      <div class="test-header">
+        <h1>Structure Module - Fixed</h1>
+        <p>This page uses proper heading hierarchy, landmarks, and list structures.</p>
+      </div>
+
+      <section>
+        <h2>Landmarks Present</h2>
+        <p>This content is wrapped in semantic landmarks (header, main, section, footer).</p>
+      </section>
+
+      <section>
+        <h2>Proper Heading Order</h2>
+        <p>Heading levels increment correctly.</p>
+        <h3>This is an H3, following an H2</h3>
+        <h4>This is an H4, following an H3</h4>
+      </section>
+
+      <section>
+        <h2>Correct List Structure</h2>
+        <p>List with only valid LI children.</p>
+        <ul>
+          <li>Valid item 1</li>
+          <li>
+            <div>Valid child inside LI</div>
+          </li>
+          <li>Valid item 2</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="test-container" style="box-shadow: none; padding-top: 0;">
+      <p>Footer landmark</p>
+    </div>
+  </footer>
+</body>
+</html>

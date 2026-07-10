@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forms Fixed - WCAGI Test</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <style>
+    .form-group { margin-bottom: 1rem; }
+    label { display: block; margin-bottom: 0.25rem; font-weight: 500; }
+    input[type="text"], input[type="email"] { padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; width: 100%; max-width: 300px;}
+    fieldset { border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem; border-radius: 4px;}
+    legend { font-weight: bold; padding: 0 0.5rem; }
+  </style>
+</head>
+<body>
+  <main class="test-container">
+    <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <div class="test-header">
+      <h1>Forms Module - Fixed</h1>
+      <p>Forms with proper labels, fieldsets, legends, and required attributes.</p>
+    </div>
+
+    <form>
+      <section>
+        <h2>Properly Labeled Inputs</h2>
+        <div class="form-group">
+          <label for="firstname">First Name</label>
+          <input type="text" id="firstname" name="firstname">
+        </div>
+
+        <div class="form-group">
+          <label for="lastname">Last Name</label>
+          <input type="text" id="lastname" name="lastname">
+        </div>
+      </section>
+
+      <section>
+        <h2>Proper Fieldset and Legend</h2>
+        <fieldset>
+          <legend>Choose your favorite color</legend>
+          <div class="form-group" style="margin-bottom:0;">
+            <input type="radio" name="color" value="red" id="c_red"> <label for="c_red" style="display:inline;">Red</label><br>
+            <input type="radio" name="color" value="blue" id="c_blue"> <label for="c_blue" style="display:inline;">Blue</label>
+          </div>
+        </fieldset>
+      </section>
+
+      <section>
+        <h2>Proper Required State</h2>
+        <div class="form-group">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" required aria-required="true">
+        </div>
+      </section>
+    </form>
+  </main>
+</body>
+</html>
